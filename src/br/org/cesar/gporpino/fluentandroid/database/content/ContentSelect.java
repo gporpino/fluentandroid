@@ -1,4 +1,4 @@
-package br.org.cesar.gporpino.fluentandroid.content;
+package br.org.cesar.gporpino.fluentandroid.database.content;
 
 import br.org.cesar.gporpino.fluentandroid.FluentAndroid;
 import br.org.cesar.gporpino.fluentandroid.database.FluentCursor;

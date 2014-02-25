@@ -6,7 +6,7 @@ import java.util.List;
 
 import android.database.Cursor;
 
-public class FluentCursor implements Iterable<CursorLine>{
+public class FluentCursor implements Iterable<CursorEntry>{
 
 	private Cursor mCursor;
 
@@ -65,12 +65,12 @@ public class FluentCursor implements Iterable<CursorLine>{
 	}
 
 	@Override
-	public Iterator<CursorLine> iterator() {
-		List<CursorLine> list = new ArrayList<CursorLine>();
+	public Iterator<CursorEntry> iterator() {
+		List<CursorEntry> list = new ArrayList<CursorEntry>();
 		
 		mCursor.moveToFirst();
 		while(!mCursor.isAfterLast()) {
-			list.add(new CursorLine(mCursor, mCursor.getPosition()));
+			list.add(new CursorEntry(mCursor, mCursor.getPosition()));
 			mCursor.moveToNext();
 		}
 		

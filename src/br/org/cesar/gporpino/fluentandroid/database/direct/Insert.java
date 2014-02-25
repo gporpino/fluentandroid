@@ -1,4 +1,4 @@
-package br.org.cesar.gporpino.fluentandroid.direct;
+package br.org.cesar.gporpino.fluentandroid.database.direct;
 
 import android.content.ContentValues;
 import br.org.cesar.gporpino.fluentandroid.FluentAndroid;

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import br.org.cesar.gporpino.fluentandroid.FluentAndroid;
+import br.org.cesar.gporpino.fluentandroid.database.config.Table;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 

@@ -1,4 +1,4 @@
-package br.org.cesar.gporpino.fluentandroid.database;
+package br.org.cesar.gporpino.fluentandroid.database.config;
 
 import java.util.HashMap;
 import java.util.Map.Entry;

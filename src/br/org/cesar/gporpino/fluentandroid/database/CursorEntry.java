@@ -2,11 +2,11 @@ package br.org.cesar.gporpino.fluentandroid.database;
 
 import android.database.Cursor;
 
-public class CursorLine {
+public class CursorEntry {
 	private Cursor mCursor;
 	private int mLinePosition;
 	
-	CursorLine(Cursor cursor, int linePosition){
+	CursorEntry(Cursor cursor, int linePosition){
 		mCursor = cursor;
 		mLinePosition = linePosition;
 	}
