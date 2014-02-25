@@ -22,6 +22,11 @@ public class FluentCursor {
 
 		return mCursor.getInt(mCursor.getColumnIndex(columnName));
 	}
+	
+	public long getLong(String columnName) {
+
+		return mCursor.getLong(mCursor.getColumnIndex(columnName));
+	}
 
 	public double getDouble(String columnName) {
 
