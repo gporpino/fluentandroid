@@ -1,7 +1,7 @@
 package br.org.cesar.gporpino.fluentandroid.database.config;
 
 public enum Constraint {
-	PRIMARY_KEY("PRIMARY KEY"), NOT_NULL("NOT NULL"), UNIQUE("UNIQUE");
+	PRIMARY_KEY("PRIMARY KEY"), AUTO_INCREMENT("AUTOINCREMENT"), UNIQUE("UNIQUE"), NOT_NULL("NOT NULL"), ;
 	
 	private String mDescription;
 

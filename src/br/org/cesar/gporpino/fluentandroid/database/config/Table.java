@@ -69,16 +69,8 @@ public class Table {
 			
 			for (int i = 0; i < column.getConstraints().length; i++) {
 				Constraint constraint = column.getConstraints()[i];
-				if (constraint == Constraint.PRIMARY_KEY){
-					script.append(" PRIMARY KEY ");
-				}else if (constraint == Constraint.NOT_NULL){
-					script.append(" PRIMARY KEY ");
-				}else if (constraint == Constraint.UNIQUE){
-					script.append(" UNIQUE ");
-				}
+				script.append(" " + constraint.description() + " ");
 			}
-		
-			
 		
 		}
 	}
