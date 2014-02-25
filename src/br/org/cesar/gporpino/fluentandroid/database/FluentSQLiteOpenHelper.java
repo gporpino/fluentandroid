@@ -3,22 +3,21 @@ package br.org.cesar.gporpino.fluentandroid.database;
 import java.util.ArrayList;
 import java.util.List;
 
-import android.content.Context;
+import br.org.cesar.gporpino.fluentandroid.FluentAndroid;
 import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteDatabase.CursorFactory;
 import android.database.sqlite.SQLiteOpenHelper;
 
 public abstract class FluentSQLiteOpenHelper extends SQLiteOpenHelper{
 	
 	private List<Table> mTables;
 
-	public FluentSQLiteOpenHelper(Context context, String name, CursorFactory factory,
-			int version) {
-		super(context, name, factory, version);
+	protected FluentSQLiteOpenHelper(String name, int version) {
+		super(FluentAndroid.getInstance().getContext(), name, null, version);
 		mTables = new ArrayList<Table>();
 		
 		configureTables(mTables);
 	}
+	
 	
 	
 	protected abstract void configureTables(List<Table> tables);

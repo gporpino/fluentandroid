@@ -1,80 +1,48 @@
 package br.org.cesar.gporpino.fluentandroid.database;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-
 import android.database.Cursor;
 
-public class FluentCursor implements Iterable<CursorLine>{
-
+public class CursorLine {
 	private Cursor mCursor;
-
-	public FluentCursor(Cursor cursor) {
+	private int mLinePosition;
+	
+	CursorLine(Cursor cursor, int linePosition){
 		mCursor = cursor;
-		if (mCursor != null){
-			mCursor.moveToFirst();
-		}
+		mLinePosition = linePosition;
 	}
-
+	
 	public String getString(String columnName) {
-
+		mCursor.moveToPosition(mLinePosition);
 		return mCursor.getString(mCursor.getColumnIndex(columnName));
 	}
 
 	public int getInt(String columnName) {
-
+		mCursor.moveToPosition(mLinePosition);
 		return mCursor.getInt(mCursor.getColumnIndex(columnName));
 	}
 	
 	public long getLong(String columnName) {
-
+		mCursor.moveToPosition(mLinePosition);
 		return mCursor.getLong(mCursor.getColumnIndex(columnName));
 	}
 
 	public double getDouble(String columnName) {
-
+		mCursor.moveToPosition(mLinePosition);
 		return mCursor.getDouble(mCursor.getColumnIndex(columnName));
 	}
 
 	public double getFloat(String columnName) {
-
+		mCursor.moveToPosition(mLinePosition);
 		return mCursor.getFloat(mCursor.getColumnIndex(columnName));
 	}
 	
 	public short getShort(String columnName) {
-
+		mCursor.moveToPosition(mLinePosition);
 		return mCursor.getShort(mCursor.getColumnIndex(columnName));
 	}
 	
 	public byte[] getBlob(String columnName) {
-
+		mCursor.moveToPosition(mLinePosition);
 		return mCursor.getBlob(mCursor.getColumnIndex(columnName));
 	}
-	
-	public int getCount(){
-		return mCursor.getCount();
-	}
-
-	public void moveToNext(){
-		mCursor.moveToNext();
-	}
-	
-	public Cursor getCursor(){
-		return mCursor;
-	}
-
-	@Override
-	public Iterator<CursorLine> iterator() {
-		List<CursorLine> list = new ArrayList<CursorLine>();
-		
-		mCursor.moveToFirst();
-		while(!mCursor.isAfterLast()) {
-			list.add(new CursorLine(mCursor, mCursor.getPosition()));
-			mCursor.moveToNext();
-		}
-		
-		return list.iterator();
-	}
-	
 }

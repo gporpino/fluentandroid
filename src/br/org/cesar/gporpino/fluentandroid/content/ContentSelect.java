@@ -1,22 +1,23 @@
-package br.org.cesar.gporpino.fluentandroid.database;
+package br.org.cesar.gporpino.fluentandroid.content;
 
+import br.org.cesar.gporpino.fluentandroid.FluentAndroid;
+import br.org.cesar.gporpino.fluentandroid.database.FluentCursor;
 import android.content.Context;
 import android.database.Cursor;
 import android.net.Uri;
-import br.org.cesar.gporpino.fluentandroid.FluentAndroid;
 
-public class Select {
+public class ContentSelect {
 
 	private String[] mProjection;
 	private Context mContext;
 	private Uri mUri;
 
-	public Select(String... projection) {
+	public ContentSelect(String... projection) {
 		mProjection = projection;
 		mContext = FluentAndroid.getInstance().getContext();
 	} 
 	
-	public Select from(Uri uri){
+	public ContentSelect from(Uri uri){
 		mUri = uri;
 		return this;
 	}
