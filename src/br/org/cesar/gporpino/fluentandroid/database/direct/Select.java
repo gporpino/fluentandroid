@@ -8,6 +8,9 @@ import br.org.cesar.gporpino.fluentandroid.database.FluentCursor;
 import br.org.cesar.gporpino.fluentandroid.database.FluentSQLiteOpenHelper;
 
 public class Select {
+	
+	public static final String ALL = null;
+	public static final String COUNT_ALL = "COUNT(*)";
 
 	private String[] mProjection;
 	private String mTableName;
@@ -22,7 +25,7 @@ public class Select {
 		mProjection = projection;
 		mDatabaseHelper = FluentAndroid.getInstance().getDatabaseHelper();
 	}
-
+	
 	public Select from(String tableName) {
 		mTableName = tableName;
 		return this;
