@@ -4,6 +4,8 @@ import br.org.cesar.gporpino.fluentandroid.database.FluentSQLiteOpenHelper;
 import android.content.Context;
 
 public class FluentAndroid {
+	
+	
 	private static FluentAndroid instance;
 	private Context mContext;
 	private FluentSQLiteOpenHelper mDatabaseHelper;
